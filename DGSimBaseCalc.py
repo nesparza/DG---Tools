@@ -45,7 +45,7 @@ class DGParams:
         self.scaledLJsigma = self.baseLJsigma / self.baseLength
         self.scaledLJepi = self.baseLJepi # energy doesnt need to be scaled?
     
-    def _Print(self):
+    def __Print(self):
         string_base = "Base - Length: %.2e EMod: %.2e LJSigma: %.2e LJEpi: %2e"\
         % (self.baseLength, self.baseEMod, self.baseLJsigma, self.baseLJepi)
         string_scaled = "Scaled - Emod: %.2e LameMu: %.2e LameLambda: %.2e LJSigma: %.2e LJEpi: %.2e" \
@@ -54,7 +54,7 @@ class DGParams:
         return "%s \n%s" % (string_base, string_scaled)
 
     def Print(self):
-        print self._Print()
+        print self.__Print()
         
 
 
